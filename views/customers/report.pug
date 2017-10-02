@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  .panel.panel-default
+    .panel-heading
+      h1 Customer:  #{customer.firstName} #{customer.lastName}
+    .panel-body
+      table.table
+       caption Orders
+       thead
+        tr
+         th Order #
+         th Product
+         th Date
+       tbody
+         each order in customer.orders 
+           tr 
+            td #{order.id}
+            td #{order.product.name}
+            td #{moment(order.date, "YYYY-MM-DD").format("dddd, MMMM Do YYYY")}

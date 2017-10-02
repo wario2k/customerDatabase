@@ -1,0 +1,5 @@
+.form-group
+    input.form-control(name="name", type="text", placeholder="Product name", value=(product?product.name:undefined))
+.form-group
+    input.form-control(name="price", type="number", placeholder="$", min="0", value=(product?product.price:undefined))
+        

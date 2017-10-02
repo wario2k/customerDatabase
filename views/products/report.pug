@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  .panel.panel-default
+    .panel-heading
+      h1 Product:  #{product.id}
+    .panel-body
+      .form-group
+        p #{product.name}
+      .form-group
+        p #{product.price}
+      
+      table.table
+       caption Orders
+       thead
+        tr
+         th Order #
+         th Customer
+         th Date
+       tbody
+         each order in product.orders 
+           tr 
+            td #{order.id}
+            td #{order.customer.firstName} #{order.customer.lastName}
+            td #{moment(order.date, "YYYY-MM-DD").format("dddd, MMMM Do YYYY")}

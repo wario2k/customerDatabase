@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  .panel.panel-default
+    .panel-heading
+      h1 Edit Product #{product.id}
+    .panel-body
+      form(action=`/product/edit/${product.id}`, method="post")
+        
+        include _form
+        button.btn.btn-primary(type="submit") Save

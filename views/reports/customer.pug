@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  .panel.panel-default
+    .panel-heading
+      h1 Customer Purchase Report
+    table.table
+       thead
+        tr
+         th Customer ID 
+         th Name
+         th Total Purchased
+         th Total Spent
+       tbody
+          each customer in customers
+            tr
+              td #{customer.id}
+              td #{customer.name}
+              td #{customer.numPurchased}
+              td #{customer.spentAmt}

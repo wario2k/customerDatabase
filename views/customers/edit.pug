@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  .panel.panel-default
+    .panel-heading
+      h1 Edit Customer #{customer.id}
+    .panel-body
+      form(action=`/customer/edit/${customer.id}`, method="post")
+        
+        include _form
+        button.btn.btn-primary(type="submit") Save

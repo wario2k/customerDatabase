@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  .panel.panel-default
+    .panel-heading
+      h1 Orders
+    .panel-body
+      p: a.btn.btn-primary(href="/order/new") New Order
+      table.table
+       thead
+        tr
+         th Order #
+         th Customer
+         th Product
+         th Price
+         th Date
+         th &nbsp;
+       tbody
+        each o in orders
+         tr
+          td #{o.id}
+          td #{o.customer.firstName} #{o.customer.lastName}
+          td #{o.product.name}
+          td $#{o.product.price.toFixed(2)}
+          td #{moment(o.date, "YYYY-MM-DD").format("dddd, MMMM Do YYYY")}
+          th: a.btn.btn-danger(href=`/order/delete/${o.id}`) Delete
+          

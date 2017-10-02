@@ -1,0 +1,14 @@
+.form-group
+    input.form-control(name="firstName", type="text", placeholder="First name", value=(customer?customer.firstName:undefined))
+.form-group
+    input.form-control(name="lastName", type="text", placeholder="Last name", value=(customer?customer.lastName:undefined))
+.form-group
+    input.form-control(name="street", type="text", placeholder="100 Main St.", value=(customer?customer.street:undefined))
+.form-group
+    input.form-control(name="city", type="text", placeholder="Anytown", value=(customer?customer.city:undefined))
+.form-group
+    input.form-control(name="state", type="text", placeholder="New Jersey", value=(customer?customer.state:undefined))
+.form-group
+    input.form-control(name="zip", type="text", placeholder="07430", value=(customer?customer.zip:undefined))
+
+        

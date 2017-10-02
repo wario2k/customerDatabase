@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+  .panel.panel-default
+    .panel-heading
+      h1 Product Sales Report
+    table.table
+       thead
+        tr
+         th Product ID 
+         th Product Name
+         th Number of Sales
+         th Gross Revenue
+         th Last Purchase Date
+       tbody
+         each product in products 
+           tr 
+            td #{product.id}
+            td #{product.name}
+            td #{product.sales}
+            td $#{(product.sales * product.price).toFixed(2)}
+            td 
+             if product.lastDate
+              p #{moment(product.lastDate, "YYYY-MM-DD").format("dddd, MMMM Do YYYY")}
+             else 
+              p N/A

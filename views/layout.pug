@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+
+    style.
+      body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .navbar {
+        margin-bottom: 20px;
+      }
+    title CMPS364 - Homework 4
+  body
+     .container
+        .navbar.navbar-default
+         .container-fluid
+            ul.nav.navbar-nav
+                li: a(href="/") Home
+                li: a(href="/customer/") Customers
+                li: a(href="/product/") Products
+                li: a(href="/order/") Orders
+                li: a(href="/reports/product") Sales Report
+                li: a(href="/reports/customer") Purchase Report *
+        block content

@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  .panel.panel-default
+    .panel-heading
+      h1 Products
+    .panel-body
+      p: a.btn.btn-primary(href="/product/new") New Product
+      table.table
+       thead
+        tr
+         th Product ID
+         th Name
+         th Price
+         th &nbsp;
+         th &nbsp;
+       tbody
+        each p in products
+         tr
+          td #{p.id}
+          td: a(href=`/product/report/${p.id}`) #{p.name}
+          td $#{p.price}
+          th: a.btn.btn-default(href=`/product/edit/${p.id}`) Edit
+          th: a.btn.btn-danger(href=`/product/delete/${p.id}`) Delete

@@ -1,0 +1,37 @@
+.row
+ .col.col-sm-12
+  .form-group
+    label(for="customer") Customer
+    select.form-control(name="customer", required)
+     option(value="") 
+     each c in customers
+      option(value=(c.id)) #{c.firstName} #{c.lastName}
+.row
+ .col.col-sm-12
+  .form-group
+    label(for="product") Product
+    select.form-control(name="product", required)
+     option(value="") 
+     each p in products
+      option(value=(p.id)) #{p.name} 
+.row
+ .col.col-sm-4
+  .form-group
+     label(for="day") Day
+     select.form-control(name="day", required)
+      - var d = 1;
+        while d < 32
+           option(value=(d)) #{d}
+           - d++
+ .col.col-sm-4
+  .form-group
+     label(for="month") Month
+     select.form-control(name="month", required)
+      - var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+      each month, index in months
+        option(value=(index+1)) #{month}
+
+ .col.col-sm-4
+  .form-group
+     label(for="year") Year
+     input.form-control(name="year", type="number", min="2017", value="2017", required)

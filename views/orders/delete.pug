@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  .panel.panel-default
+    .panel-heading
+      h1 Confirm Deletion of Order: #{order.id}
+    .panel-body
+      form(action=`/order/delete/${order.id}`, method="post")
+        
+        button.btn.btn-primary(type="submit") Delete
+        a.btn.btn-default(style="margin-left:1em", href="/order") Cancel

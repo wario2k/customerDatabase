@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+  .panel.panel-default
+    .panel-heading
+      h1 Customers
+    .panel-body
+      p: a.btn.btn-primary(href="/customer/new") New Customer
+      table.table
+       thead
+        tr
+         th First Name
+         th Last Name
+         th Street
+         th City
+         th State
+         th Zip
+         th &nbsp;
+         th &nbsp;
+       tbody
+        each c in customers
+         tr
+          td #{c.firstName}
+          td: a(href=`/customer/report/${c.id}`) #{c.lastName}
+          td #{c.street}
+          td #{c.city}
+          td #{c.state}
+          td #{c.zip}
+          th: a.btn.btn-default(href=`/customer/edit/${c.id}`) Edit
+          th: a.btn.btn-danger(href=`/customer/delete/${c.id}`) Delete
