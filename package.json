@@ -1,0 +1,24 @@
+{
+  "name": "cmps364_hw4",
+  "version": "1.0.0",
+  "description": "Homework assignment for CMPS364 - Database Systems",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Scott Frees",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/freezer333/cmps364_hw4/issues"
+  },
+  "homepage": "https://github.com/freezer333/cmps364_hw4#readme",
+  "dependencies": {
+    "async": "2.1.5",
+    "express": "^4.15.2",
+    "express-busboy": "^5.0.0",
+    "moment": "2.17.1",
+    "pug": "^2.0.0-beta11",
+    "sqlite3": "^3.1.8"
+  }
+}
